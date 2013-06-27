@@ -10,7 +10,7 @@ get '/' do
       :user => 'postgres')
   @first = params[:first]
   @last = params[:last]
-  @age = params[:age]
+  @age = params[:age].to_i
   @gender = params[:gender]
   sql = "insert into contacts2 (first,last,age,gender) values ('#{@first}', '#{@last}', #{@age} , '#{@gender}')"
   db.exec(sql)
