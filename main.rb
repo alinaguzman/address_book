@@ -1,4 +1,10 @@
+require 'rubygems'
+
+#It has a problem on the following line for unknown reasons
 require 'sinatra'
+# The next line is not a problem
+require 'sinatra/reloader'
+require 'rainbow'
 require 'pg'
 
 get '/' do
